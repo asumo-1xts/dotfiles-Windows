@@ -1,0 +1,38 @@
+{
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  "chat.fontFamily": "Moralerspace Neon HW",
+  "chat.fontSize": 14,
+  "editor.fontFamily": "Moralerspace Neon HW",
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
+  "editor.tabSize": 2,
+  "explorer.compactFolders": false,
+  "explorer.confirmDragAndDrop": false,
+  "extensions.ignoreRecommendations": true,
+  "files.associations": {
+    "*.toml": "ini"
+  },
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.openRepositoryInParentFolders": "never",
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "terminal.integrated.commandsToSkipShell": [
+    "matlab.interrupt"
+  ],
+  "terminal.integrated.defaultLocation": "editor",
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.fontFamily": "Moralerspace Neon HW",
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.tabs.defaultIcon": "terminal-linux",
+  "vsicons.dontShowNewVersionMessage": true,
+  "workbench.colorTheme": "GitHub Dark Colorblind (Beta)",
+  "workbench.iconTheme": "vscode-icons",
+  "editor.wordWrap": "on",
+  "git.suggestSmartCommit": false
+}

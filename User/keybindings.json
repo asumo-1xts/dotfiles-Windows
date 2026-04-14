@@ -1,0 +1,114 @@
+// 既定値を上書きするには、このファイル内にキー バインドを挿入します
+[
+  {
+    "command": "workbench.action.terminal.focus",
+    "key": "ctrl+8",
+    "when": "!terminalFocus"
+  },
+  {
+    "command": "workbench.action.focusFirstEditorGroup",
+    "key": "ctrl+8",
+    "when": "terminalFocus"
+  },
+  {
+    "command": "markdown.showPreviewToSide",
+    "key": "ctrl+p",
+    "when": "!notebookEditorFocused && editorLangId = markdown"
+  },
+  {
+    "command": "workbench.action.moveEditorToRightGroup",
+    "key": "alt+0"
+  },
+  {
+    "command": "workbench.action.moveEditorToLeftGroup",
+    "key": "alt+9"
+  },
+  {
+    "args": {
+      "snippet": "${LINE_COMMENT}$0"
+    },
+    "command": "editor.action.insertSnippet",
+    "key": "ctrl+shift+/",
+    "when": "editorTextFocus"
+  },
+  {
+    "command": "workbench.action.focusLeftGroup",
+    "key": "ctrl+9"
+  },
+  {
+    "command": "-workbench.action.focusLeftGroup",
+    "key": "ctrl+k ctrl+left"
+  },
+  {
+    "command": "workbench.action.focusRightGroup",
+    "key": "ctrl+0"
+  },
+  {
+    "command": "-workbench.action.focusRightGroup",
+    "key": "ctrl+k ctrl+right"
+  },
+  {
+    "command": "workbench.action.nextEditorInGroup",
+    "key": "ctrl+tab"
+  },
+  {
+    "command": "-workbench.action.nextEditorInGroup",
+    "key": "ctrl+k ctrl+pagedown"
+  },
+  {
+    "command": "workbench.action.previousEditorInGroup",
+    "key": "ctrl+shift+tab"
+  },
+  {
+    "command": "-workbench.action.previousEditorInGroup",
+    "key": "ctrl+k ctrl+pageup"
+  },
+  {
+    "command": "-workbench.action.moveEditorToLastGroup",
+    "key": "shift+alt+9"
+  },
+  {
+    "command": "-workbench.action.toggleEditorGroupLayout",
+    "key": "shift+alt+0"
+  },
+  {
+    "command": "-workbench.action.lastEditorInGroup",
+    "key": "ctrl+9"
+  },
+  {
+    "command": "-workbench.action.quickOpenNavigatePreviousInEditorPicker",
+    "key": "ctrl+shift+tab",
+    "when": "inEditorsPicker && inQuickOpen"
+  },
+  {
+    "command": "-workbench.action.quickOpenLeastRecentlyUsedEditorInGroup",
+    "key": "ctrl+shift+tab",
+    "when": "!activeEditorGroupEmpty"
+  },
+  {
+    "command": "-workbench.action.quickOpenNavigateNextInEditorPicker",
+    "key": "ctrl+tab",
+    "when": "inEditorsPicker && inQuickOpen"
+  },
+  {
+    "command": "-workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
+    "key": "ctrl+tab",
+    "when": "!activeEditorGroupEmpty"
+  },
+  {
+    "command": "-workbench.action.focusSideBar",
+    "key": "ctrl+0"
+  },
+  {
+    "command": "-workbench.action.lastEditorInGroup",
+    "key": "alt+0"
+  },
+  {
+    "command": "-workbench.action.openEditorAtIndex9",
+    "key": "alt+9"
+  },
+  {
+    "key": "ctrl+g",
+    "command": "git-graph.view"
+  }
+]

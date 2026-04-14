@@ -1,0 +1,105 @@
+format = """
+\n$status\
+$memory_usage\
+$cmd_duration\n
+$directory\
+[](fg:#769ff0 bg:#394260)\
+$git_branch\
+$git_status\
+$git_commit\
+[ ](fg:#394260)\
+$sudo\
+"""
+
+right_format = """
+$c\
+$cpp\
+$rust\
+$python\
+$nodejs\
+[](fg:#e3e5e5)\
+$time\
+$os\
+"""
+
+add_newline = false
+continuation_prompt = '[󱇂 ](fg:#769ff0)'
+
+[status]
+disabled = false
+format = '[$symbol ]($style)'
+symbol = "[󰅚](bold red)"
+success_symbol = "[󰗡](bold green)"
+not_executable_symbol = "[](bold red)"
+not_found_symbol = "[](bold red)"
+map_symbol = true
+[cmd_duration]
+show_milliseconds = true
+min_time = 1_0
+format = '[ 󰔛 $duration](bold #e3e5e5)'
+[memory_usage]
+disabled = false
+format = '[$symbol ${ram}](bold dimmed green) '
+threshold = 1_1
+symbol = '  '
+
+[directory]
+style = "fg:#e3e5e5 bg:#769ff0"
+format = "[ $path]($style)"
+truncation_length = 3
+truncation_symbol = "󱉭 "
+[git_branch]
+symbol = " "
+style = "bg:#394260"
+format = '[[ $symbol$branch ](fg:#769ff0 bg:#394260)]($style)'
+[git_status]
+style = "bg:#394260"
+format = '[[($all_status$ahead_behind)](fg:#769ff0 bg:#394260)]($style)'
+[git_commit]
+style = "bg:#394260"
+format = '[[\[($hash$tag)\]](fg:#769ff0 bg:#394260)]($style)'
+tag_symbol = " "
+[sudo]
+disabled = false
+format = '[$symbol]($style)'
+symbol = "󱡄  "
+
+[time]
+disabled = false
+style = "fg:#394260 bg:#e3e5e5"
+format = '[󰅐 $time ]($style) '
+[os]
+disabled = false
+style = "fg:#e3e5e5"
+format = '[$symbol]($style)'
+[os.symbols]
+Arch = ""
+Debian = ""
+Mint = ""
+Ubuntu = ""
+Macos = ""
+Windows = ""
+
+[c]
+format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+symbol = " "
+style = "bold #A8B9CC"
+detect_folders = ["src"]
+[cpp]
+format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+symbol = " "
+style = "bold #00599C"
+detect_folders = ["src"]
+disabled = false
+[rust]
+format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+symbol = " "
+style = "bold #DEA584"
+[python]
+format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+symbol = " "
+style = "bold #3776AB"
+[nodejs]
+format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+symbol = " "
+style = "bold #5FA04E"
