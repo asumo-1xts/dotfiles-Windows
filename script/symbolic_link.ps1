@@ -1,6 +1,20 @@
+if (-not (Test-Path "$HOME\.config")) {
+    mkdir "$HOME\.config"
+}
+
 cmd /c mklink /D `
-    "$HOME\.config" `
-    "$PWD\.config"
+    "$HOME\.config\wezterm" `
+    "$PWD\.config\wezterm"
+
+cmd /c mklink `
+    "$HOME\.config\starship.toml" `
+    "$PWD\.config\starship.toml"
+
+# ===========================================================================
+
+if (-not (Test-Path "$HOME\Documents\PowerShell")) {
+    mkdir "$HOME\Documents\PowerShell"
+}
 
 cmd /c mklink `
     "$HOME\Documents\PowerShell\alias.ps1" `
