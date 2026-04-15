@@ -1,4 +1,4 @@
-# 主な処理
+# 展開の処理を行う関数
 function Expand-LastWord {
     param($line, $cursor)
 
@@ -26,49 +26,43 @@ function Expand-LastWord {
     return $null
 }
 
+# 略語が行頭にあることを確認して展開の処理を呼び出す関数
+function Check-and-Expand {
+    param($line, $cursor)
+
+    # 現在の状態を取得
+    $line = $null
+    $cursor = 0
+    [Microsoft.PowerShell.PSConsoleReadLine]::GetBufferState([ref]$line, [ref]$cursor)
+
+    # 行頭に略語があれば展開
+    $result = Expand-LastWord $line $cursor
+
+    if ($result ) {
+        $beforeMatch = $line.Substring(0, $result.Start)
+        if ($beforeMatch -match '^\s*$') {
+            # 単語を削除して展開後の文字を挿入
+            $diff = $cursor - $result.Start
+            [Microsoft.PowerShell.PSConsoleReadLine]::Replace($result.Start, $diff, $result.Expanded)
+        }
+    }
+}
+
 # 処理を呼び出すハンドラー
 function Register-AbbrHandler {
+    # Spaceキー：展開後してスペースを挿入
     Set-PSReadLineKeyHandler -Key Spacebar -ScriptBlock {
         param($key, $arg)
 
-        # 現在の状態を取得
-        $line = $null
-        $cursor = 0
-        [Microsoft.PowerShell.PSConsoleReadLine]::GetBufferState([ref]$line, [ref]$cursor)
-
-        # 展開対象があるか確認
-        $result = Expand-LastWord $line $cursor
-
-        if ($result) {
-            # 単語を削除して展開後の文字を挿入
-            # Replace(開始位置, 長さ, 置換文字列)
-            $diff = $cursor - $result.Start
-            [Microsoft.PowerShell.PSConsoleReadLine]::Replace($result.Start, $diff, $result.Expanded)
-        }
-
-        # 最後にスペースを挿入
+        Check-and-Expand
         [Microsoft.PowerShell.PSConsoleReadLine]::Insert(' ')
     }
 
+    # Enterキー：展開して実行
     Set-PSReadLineKeyHandler -Key Enter -ScriptBlock {
         param($key, $arg)
-
-        # 現在の状態を取得
-        $line = $null
-        $cursor = 0
-        [Microsoft.PowerShell.PSConsoleReadLine]::GetBufferState([ref]$line, [ref]$cursor)
-
-        # 展開対象があるか確認
-        $result = Expand-LastWord $line $cursor
-
-        if ($result) {
-            # 単語を削除して展開後の文字を挿入
-            # Replace(開始位置, 長さ, 置換文字列)
-            $diff = $cursor - $result.Start
-            [Microsoft.PowerShell.PSConsoleReadLine]::Replace($result.Start, $diff, $result.Expanded)
-        }
-
-        # 実行
+        
+        Check-and-Expand
         [Microsoft.PowerShell.PSConsoleReadLine]::AcceptLine()
     }
 }
