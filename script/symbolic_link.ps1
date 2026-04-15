@@ -5,7 +5,7 @@ cmd /c mklink "$HOME\.config\starship.toml" "$PWD\.config\starship.toml"
 
 # PowerShellとエイリアスの設定
 if (-not (Test-Path "$HOME\Documents\PowerShell")) { mkdir "$HOME\Documents\PowerShell" }
-cmd /c mklink "$HOME\Documents\PowerShell\alias.ps1" "$PWD\PowerShell\alias.ps1"
+cmd /c mklink "$HOME\Documents\PowerShell\pwsh-alias.ps1" "$PWD\PowerShell\pwsh-alias.ps1"
 cmd /c mklink "$HOME\Documents\PowerShell\pwsh-abbr.ps1" "$PWD\PowerShell\pwsh-abbr.ps1"
 cmd /c mklink "$HOME\Documents\PowerShell\Microsoft.PowerShell_profile.ps1" "$PWD\PowerShell\Microsoft.PowerShell_profile.ps1"
 
