@@ -2,6 +2,9 @@
   "[github-actions-workflow]": {
     "editor.defaultFormatter": "oxc.oxc-vscode"
   },
+  "[powershell]": {
+    "editor.defaultFormatter": "ms-vscode.powershell"
+  },
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff"
   },
@@ -34,5 +37,6 @@
   "workbench.colorTheme": "GitHub Dark Colorblind (Beta)",
   "workbench.iconTheme": "vscode-icons",
   "editor.wordWrap": "on",
-  "git.suggestSmartCommit": false
+  "git.suggestSmartCommit": false,
+  "editor.codeLens": false,
 }
