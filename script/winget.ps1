@@ -23,20 +23,20 @@ Write-Host ""
 if ($args[0] -ne "/DisablePausePrompts") { pause }
 Write-Host ""
 Write-Host "This script will attempt to install the following packages:"
-Write-Host "  - Zoom Workplace from WinGet"
-Write-Host "  - Google Chrome from WinGet"
-Write-Host "  - Git from WinGet"
-Write-Host "  - Mery from WinGet"
-Write-Host "  - Google Drive from WinGet"
-Write-Host "  - WezTerm from WinGet"
-Write-Host "  - CrystalDiskInfo from WinGet"
+Write-Host "  - Windows Terminal from WinGet"
 Write-Host "  - Core Temp from WinGet"
-Write-Host "  - OneCommander from WinGet"
-Write-Host "  - LLVM from WinGet"
-Write-Host "  - eza from WinGet"
-Write-Host "  - Microsoft Visual Studio Code from WinGet"
+Write-Host "  - Git from WinGet"
 Write-Host "  - PowerShell from WinGet"
 Write-Host "  - starship from WinGet"
+Write-Host "  - LLVM from WinGet"
+Write-Host "  - Google Chrome from WinGet"
+Write-Host "  - Mery from WinGet"
+Write-Host "  - Microsoft Visual Studio Code from WinGet"
+Write-Host "  - Zoom Workplace from WinGet"
+Write-Host "  - CrystalDiskInfo from WinGet"
+Write-Host "  - OneCommander from WinGet"
+Write-Host "  - eza from WinGet"
+Write-Host "  - Edit from WinGet"
 Write-Host ""
 if ($args[0] -ne "/DisablePausePrompts") { pause }
 Clear-Host
@@ -47,20 +47,20 @@ $commands_run=0
 $results=""
 
 $commands= @(
-    'cmd.exe /C winget.exe install --id "Zoom.Zoom" --exact --source winget --accept-source-agreements --disable-interactivity --silent --accept-package-agreements --force',
-    'cmd.exe /C winget.exe install --id "Google.Chrome" --exact --source winget --accept-source-agreements --disable-interactivity --silent --accept-package-agreements --force',
-    'cmd.exe /C winget.exe install --id "Git.Git" --exact --source winget --accept-source-agreements --disable-interactivity --silent --accept-package-agreements --force',
-    'cmd.exe /C winget.exe install --id "Kuro.Mery" --exact --source winget --accept-source-agreements --disable-interactivity --silent --accept-package-agreements --force',
-    'cmd.exe /C winget.exe install --id "Google.GoogleDrive" --exact --source winget --accept-source-agreements --disable-interactivity --silent --accept-package-agreements --force',
-    'cmd.exe /C winget.exe install --id "wez.wezterm" --exact --source winget --accept-source-agreements --disable-interactivity --silent --accept-package-agreements --force',
-    'cmd.exe /C winget.exe install --id "CrystalDewWorld.CrystalDiskInfo" --exact --source winget --accept-source-agreements --disable-interactivity --silent --accept-package-agreements --force',
+    'cmd.exe /C winget.exe install --id "Microsoft.WindowsTerminal" --exact --source winget --accept-source-agreements --disable-interactivity --silent --accept-package-agreements --force',
     'cmd.exe /C winget.exe install --id "ALCPU.CoreTemp" --exact --source winget --accept-source-agreements --disable-interactivity --silent --accept-package-agreements --force',
-    'cmd.exe /C winget.exe install --id "MilosParipovic.OneCommander" --exact --source winget --accept-source-agreements --disable-interactivity --silent --accept-package-agreements --force',
-    'cmd.exe /C winget.exe install --id "LLVM.LLVM" --exact --source winget --accept-source-agreements --disable-interactivity --silent --accept-package-agreements --force',
-    'cmd.exe /C winget.exe install --id "eza-community.eza" --exact --source winget --accept-source-agreements --disable-interactivity --silent --accept-package-agreements --force',
-    'cmd.exe /C winget.exe install --id "Microsoft.VisualStudioCode" --exact --source winget --accept-source-agreements --disable-interactivity --silent --accept-package-agreements --force',
+    'cmd.exe /C winget.exe install --id "Git.Git" --exact --source winget --accept-source-agreements --disable-interactivity --silent --accept-package-agreements --force',
     'cmd.exe /C winget.exe install --id "Microsoft.PowerShell" --exact --source winget --accept-source-agreements --disable-interactivity --silent --accept-package-agreements --force',
-    'cmd.exe /C winget.exe install --id "Starship.Starship" --exact --source winget --accept-source-agreements --disable-interactivity --silent --accept-package-agreements --force'
+    'cmd.exe /C winget.exe install --id "Starship.Starship" --exact --source winget --accept-source-agreements --disable-interactivity --silent --accept-package-agreements --force',
+    'cmd.exe /C winget.exe install --id "LLVM.LLVM" --exact --source winget --accept-source-agreements --disable-interactivity --silent --accept-package-agreements --force',
+    'cmd.exe /C winget.exe install --id "Google.Chrome" --exact --source winget --accept-source-agreements --disable-interactivity --silent --accept-package-agreements --force',
+    'cmd.exe /C winget.exe install --id "Kuro.Mery" --exact --source winget --accept-source-agreements --disable-interactivity --silent --accept-package-agreements --force',
+    'cmd.exe /C winget.exe install --id "Microsoft.VisualStudioCode" --exact --source winget --accept-source-agreements --disable-interactivity --silent --accept-package-agreements --force',
+    'cmd.exe /C winget.exe install --id "Zoom.Zoom" --exact --source winget --accept-source-agreements --disable-interactivity --silent --accept-package-agreements --force',
+    'cmd.exe /C winget.exe install --id "CrystalDewWorld.CrystalDiskInfo" --exact --source winget --accept-source-agreements --disable-interactivity --silent --accept-package-agreements --force',
+    'cmd.exe /C winget.exe install --id "MilosParipovic.OneCommander" --exact --source winget --accept-source-agreements --disable-interactivity --silent --accept-package-agreements --force',
+    'cmd.exe /C winget.exe install --id "eza-community.eza" --exact --source winget --accept-source-agreements --disable-interactivity --silent --accept-package-agreements --force',
+    'cmd.exe /C winget.exe install --id "Microsoft.Edit" --exact --source winget --accept-source-agreements --disable-interactivity --silent --accept-package-agreements --force'
 )
 
 foreach ($command in $commands) {
