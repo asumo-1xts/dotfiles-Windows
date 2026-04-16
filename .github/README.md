@@ -4,12 +4,26 @@ My dotfiles at Windows 11.
 
 ## Recovery with `script`
 
-### Clone this repository as `dotfiles`
+Run PowerShell as an Administrator:
+
+### Download ZIP as `dotfiles`
 
 ```powershell
-winget install -e --id Git.Git
-git clone https://github.com/asumo-1xts/dotfiles-Windows.git dotfiles
 cd dotfiles
+```
+
+### 自己証明書による署名
+
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+
+PowerShell $PWD\script\self_signer.ps1 $PROFILE
+
+PowerShell $PWD\script\self_signer.ps1 `
+  $HOME\Documents\dotfiles\PowerShell\pwsh_abbr.ps1
+
+PowerShell $PWD\script\self_signer.ps1 `
+  $HOME\Documents\dotfiles\PowerShell\pwsh_alias.ps1
 ```
 
 ### Install tools and make symbolic-links
