@@ -31,4 +31,6 @@ PowerShell $PWD\script\self_signer.ps1 `
 ```powershell
 .\script\winget.ps1
 .\script\symbolic_link.ps1
+
+git config --global core.editor "edit"
 ```
