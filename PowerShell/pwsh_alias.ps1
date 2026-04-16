@@ -5,7 +5,7 @@ Set-Alias -Name eza -Value eza-custom -Option AllScope
 # 設定ファイル
 function sz { . $PROFILE }
 function cz { code $PROFILE }
-function cza { code "$HOME\Documents\PowerShell\pwsh-alias.ps1" }
+function cza { code "$HOME\Documents\PowerShell\pwsh_alias.ps1" }
 
 # Git
 Set-Abbr "gad" "git add"

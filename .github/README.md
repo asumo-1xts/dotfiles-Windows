@@ -16,5 +16,5 @@ cd dotfiles
 
 ```powershell
 .\script\winget.ps1
-.\script\symbolic_link.ps1 # As an administrator
+.\script\symbolic_link.ps1
 ```
