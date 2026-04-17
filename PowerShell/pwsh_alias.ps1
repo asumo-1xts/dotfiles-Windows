@@ -1,5 +1,7 @@
 # eza（二段階に分けて元の`eza`を上書き）
-function eza-custom { eza --icons --hyperlink --group-directories-first $args }
+function eza-custom { `
+  eza --icons --hyperlink --group-directories-first $args `
+}
 Set-Alias -Name eza -Value eza-custom -Option AllScope
 
 # 設定ファイル
