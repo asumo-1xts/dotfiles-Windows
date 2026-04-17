@@ -10,10 +10,13 @@
   },
   "chat.fontFamily": "Moralerspace Neon HW",
   "chat.fontSize": 14,
+  "editor.codeLens": false,
+  "editor.defaultFormatter": "oxc.oxc-vscode",
   "editor.fontFamily": "Moralerspace Neon HW",
   "editor.formatOnSave": true,
   "editor.formatOnSaveMode": "file",
   "editor.tabSize": 2,
+  "editor.wordWrap": "on",
   "explorer.compactFolders": false,
   "explorer.confirmDragAndDrop": false,
   "extensions.ignoreRecommendations": true,
@@ -23,10 +26,10 @@
   "git.autofetch": true,
   "git.confirmSync": false,
   "git.openRepositoryInParentFolders": "never",
+  "git.suggestSmartCommit": false,
   "github.copilot.nextEditSuggestions.enabled": true,
-  "terminal.integrated.commandsToSkipShell": [
-    "matlab.interrupt"
-  ],
+  "oxc.path.node": "C:\\Program Files\\nodejs\\node.exe",
+  "terminal.integrated.commandsToSkipShell": ["matlab.interrupt"],
   "terminal.integrated.defaultLocation": "editor",
   "terminal.integrated.defaultProfile.linux": "zsh",
   "terminal.integrated.defaultProfile.windows": "PowerShell",
@@ -35,8 +38,5 @@
   "terminal.integrated.tabs.defaultIcon": "terminal-linux",
   "vsicons.dontShowNewVersionMessage": true,
   "workbench.colorTheme": "GitHub Dark Colorblind (Beta)",
-  "workbench.iconTheme": "vscode-icons",
-  "editor.wordWrap": "on",
-  "git.suggestSmartCommit": false,
-  "editor.codeLens": false,
+  "workbench.iconTheme": "vscode-icons"
 }
