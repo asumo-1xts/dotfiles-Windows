@@ -6,29 +6,23 @@ My dotfiles at Windows 11.
 
 Run PowerShell as an Administrator:
 
-### Download ZIP as `dotfiles`
+### Set policies and move to `dotfiles`
+
+Download ZIP as `dotfiles`:
 
 ```powershell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
+Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
+
 cd dotfiles
-```
-
-### 自己証明書による署名
-
-```powershell
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-
-PowerShell $PWD\script\self_signer.ps1 $PROFILE
-
-PowerShell $PWD\script\self_signer.ps1 `
-  $HOME\Documents\dotfiles\PowerShell\pwsh_abbr.ps1
-
-PowerShell $PWD\script\self_signer.ps1 `
-  $HOME\Documents\dotfiles\PowerShell\pwsh_alias.ps1
 ```
 
 ### Install tools and make symbolic-links
 
 ```powershell
+# ローカルで作成した扱いにしてRemoteSigned字に署名を回避
+Get-ChildItem -Path "$PWD\PowerShell" -Recurse | Unblock-File
+
 .\script\winget.ps1
 .\script\symbolic_link.ps1
 
