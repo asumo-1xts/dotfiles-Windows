@@ -1,7 +1,6 @@
 # ターミナルの装飾
 $target_dir = "$HOME\.config"
 if (!(Test-Path $target_dir)) { mkdir $target_dir }
-cmd /c mklink /D $target_dir\wezterm $PWD\.config\wezterm
 cmd /c mklink $target_dir\starship.toml $PWD\.config\starship.toml
 
 # PowerShellとエイリアスの設定
