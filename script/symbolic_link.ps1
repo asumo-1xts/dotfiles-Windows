@@ -1,15 +1,19 @@
 # ターミナルの装飾
-if (-not (Test-Path "$HOME\.config")) { mkdir "$HOME\.config" }
-cmd /c mklink /D "$HOME\.config\wezterm" "$PWD\.config\wezterm"
-cmd /c mklink "$HOME\.config\starship.toml" "$PWD\.config\starship.toml"
+$target_dir = "$HOME\.config"
+if (!(Test-Path $target_dir)) { mkdir $target_dir }
+cmd /c mklink /D $target_dir\wezterm $PWD\.config\wezterm
+cmd /c mklink $target_dir\starship.toml $PWD\.config\starship.toml
 
 # PowerShellとエイリアスの設定
-if (-not (Test-Path "$HOME\Documents\PowerShell")) { mkdir "$HOME\Documents\PowerShell" }
-cmd /c mklink "$HOME\Documents\PowerShell\pwsh_alias.ps1" "$PWD\PowerShell\pwsh_alias.ps1"
-cmd /c mklink "$HOME\Documents\PowerShell\pwsh_abbr.ps1" "$PWD\PowerShell\pwsh_abbr.ps1"
-cmd /c mklink "$HOME\Documents\PowerShell\Microsoft.PowerShell_profile.ps1" "$PWD\PowerShell\Microsoft.PowerShell_profile.ps1"
+$target_dir = "$HOME\Documents\PowerShell"
+if (!(Test-Path $target_dir)) { mkdir $target_dir }
+cmd /c mklink $target_dir\pwsh_alias.ps1 $PWD\PowerShell\pwsh_alias.ps1
+cmd /c mklink $target_dir\pwsh_abbr.ps1 $PWD\PowerShell\pwsh_abbr.ps1
+cmd /c mklink $target_dir\Microsoft.PowerShell_profile.ps1 `
+  $PWD\PowerShell\Microsoft.PowerShell_profile.ps1
 
-## VScodeの環境設定（Microsoftアカウントで同期しない場合に使用）
-code
-cmd /c mklink "$HOME\AppData\Roaming\Code\User\settings.json" "$PWD\Code\User\settings.json"
-cmd /c mklink "$HOME\AppData\Roaming\Code\User\keybindings.json" "$PWD\Code\User\keybindings.json"
+# VScodeの環境設定
+$target_dir = "$HOME\AppData\Roaming\Code\User"
+if (!(Test-Path $target_dir)) { mkdir $target_dir }
+cmd /c mklink $target_dir\settings.json $PWD\Code\User\settings.json
+cmd /c mklink $target_dir\keybindings.json $PWD\Code\User\keybindings.json
