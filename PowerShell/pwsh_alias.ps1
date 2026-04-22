@@ -1,13 +1,10 @@
-# eza（二段階に分けて元の`eza`を上書き）
-function eza-custom { `
-  eza --icons --hyperlink --group-directories-first $args `
-}
-Set-Alias -Name eza -Value eza-custom -Option AllScope
+# eza
+Set-Abbr "eza" "eza --icons --hyperlink --group-directories-first"
 
 # 設定ファイル
-function sz { . $PROFILE }
-function cz { code $PROFILE }
-function cza { code "$HOME\Documents\PowerShell\pwsh_alias.ps1" }
+Set-Abbr "sz" ". $PROFILE"
+Set-Abbr "cz" "code $PROFILE"
+Set-Abbr "cza" "code $HOME\Documents\PowerShell\pwsh_alias.ps1"
 
 # Git
 Set-Abbr "gad" "git add"
