@@ -1,19 +1,25 @@
 {
   "[github-actions-workflow]": {
-    "editor.defaultFormatter": "oxc.oxc-vscode"
+    "editor.defaultFormatter": "oxc.oxc-vscode",
   },
   "[powershell]": {
-    "editor.defaultFormatter": "ms-vscode.powershell"
+    "editor.defaultFormatter": "ms-vscode.powershell",
   },
   "[python]": {
-    "editor.defaultFormatter": "charliermarsh.ruff"
+    "editor.defaultFormatter": "charliermarsh.ruff",
   },
+  "[c]": {
+    "editor.defaultFormatter": "xaver.clang-format",
+  },
+  "[cpp]": {
+    "editor.defaultFormatter": "xaver.clang-format",
+  },
+  "arduino.useArduinoCli": true,
   "chat.fontFamily": "Moralerspace Neon HW",
   "chat.fontSize": 14,
   "editor.codeLens": false,
   "editor.defaultFormatter": "oxc.oxc-vscode",
   "editor.fontFamily": "Moralerspace Neon HW",
-  "editor.formatOnSave": true,
   "editor.formatOnSaveMode": "file",
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
@@ -21,7 +27,8 @@
   "explorer.confirmDragAndDrop": false,
   "extensions.ignoreRecommendations": true,
   "files.associations": {
-    "*.toml": "ini"
+    "*.toml": "ini",
+    "*.ino": "cpp",
   },
   "git.autofetch": true,
   "git.confirmSync": false,
@@ -29,14 +36,24 @@
   "git.suggestSmartCommit": false,
   "github.copilot.nextEditSuggestions.enabled": true,
   "oxc.path.node": "C:\\Program Files\\nodejs\\node.exe",
+  // "oxc.path.node": "/home/asumo/.local/share/mise/installs/node/25.4.0/bin/node",
   "terminal.integrated.commandsToSkipShell": ["matlab.interrupt"],
-  "terminal.integrated.defaultLocation": "editor",
+  "terminal.integrated.defaultLocation": "view",
   "terminal.integrated.defaultProfile.linux": "zsh",
   "terminal.integrated.defaultProfile.windows": "PowerShell",
   "terminal.integrated.fontFamily": "Moralerspace Neon HW",
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.tabs.defaultIcon": "terminal-linux",
   "vsicons.dontShowNewVersionMessage": true,
+  "workbench.iconTheme": "vscode-icons",
+  "explorer.confirmPasteNative": false,
+  "csv.enabled": true,
   "workbench.colorTheme": "GitHub Dark Colorblind (Beta)",
-  "workbench.iconTheme": "vscode-icons"
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false,
+  },
+  "editor.formatOnSave": true,
 }

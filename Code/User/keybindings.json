@@ -1,114 +1,50 @@
-// 既定値を上書きするには、このファイル内にキー バインドを挿入します
 [
-  {
-    "command": "workbench.action.terminal.focus",
-    "key": "ctrl+8",
-    "when": "!terminalFocus"
-  },
-  {
-    "command": "workbench.action.focusFirstEditorGroup",
-    "key": "ctrl+8",
-    "when": "terminalFocus"
-  },
-  {
-    "command": "markdown.showPreviewToSide",
-    "key": "ctrl+p",
-    "when": "!notebookEditorFocused && editorLangId = markdown"
-  },
-  {
-    "command": "workbench.action.moveEditorToRightGroup",
-    "key": "alt+0"
-  },
-  {
-    "command": "workbench.action.moveEditorToLeftGroup",
-    "key": "alt+9"
-  },
-  {
-    "args": {
-      "snippet": "${LINE_COMMENT}$0"
+    {
+        "key": "ctrl+alt+/",
+        "command": "editor.action.insertSnippet",
+        "args": {
+            "snippet": "$LINE_COMMENT"
+        },
+        "when": "editorTextFocus && !editorReadonly"
     },
-    "command": "editor.action.insertSnippet",
-    "key": "ctrl+shift+/",
-    "when": "editorTextFocus"
-  },
-  {
-    "command": "workbench.action.focusLeftGroup",
-    "key": "ctrl+9"
-  },
-  {
-    "command": "-workbench.action.focusLeftGroup",
-    "key": "ctrl+k ctrl+left"
-  },
-  {
-    "command": "workbench.action.focusRightGroup",
-    "key": "ctrl+0"
-  },
-  {
-    "command": "-workbench.action.focusRightGroup",
-    "key": "ctrl+k ctrl+right"
-  },
-  {
-    "command": "workbench.action.nextEditorInGroup",
-    "key": "ctrl+tab"
-  },
-  {
-    "command": "-workbench.action.nextEditorInGroup",
-    "key": "ctrl+k ctrl+pagedown"
-  },
-  {
-    "command": "workbench.action.previousEditorInGroup",
-    "key": "ctrl+shift+tab"
-  },
-  {
-    "command": "-workbench.action.previousEditorInGroup",
-    "key": "ctrl+k ctrl+pageup"
-  },
-  {
-    "command": "-workbench.action.moveEditorToLastGroup",
-    "key": "shift+alt+9"
-  },
-  {
-    "command": "-workbench.action.toggleEditorGroupLayout",
-    "key": "shift+alt+0"
-  },
-  {
-    "command": "-workbench.action.lastEditorInGroup",
-    "key": "ctrl+9"
-  },
-  {
-    "command": "-workbench.action.quickOpenNavigatePreviousInEditorPicker",
-    "key": "ctrl+shift+tab",
-    "when": "inEditorsPicker && inQuickOpen"
-  },
-  {
-    "command": "-workbench.action.quickOpenLeastRecentlyUsedEditorInGroup",
-    "key": "ctrl+shift+tab",
-    "when": "!activeEditorGroupEmpty"
-  },
-  {
-    "command": "-workbench.action.quickOpenNavigateNextInEditorPicker",
-    "key": "ctrl+tab",
-    "when": "inEditorsPicker && inQuickOpen"
-  },
-  {
-    "command": "-workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
-    "key": "ctrl+tab",
-    "when": "!activeEditorGroupEmpty"
-  },
-  {
-    "command": "-workbench.action.focusSideBar",
-    "key": "ctrl+0"
-  },
-  {
-    "command": "-workbench.action.lastEditorInGroup",
-    "key": "alt+0"
-  },
-  {
-    "command": "-workbench.action.openEditorAtIndex9",
-    "key": "alt+9"
-  },
-  {
-    "key": "ctrl+g",
-    "command": "git-graph.view"
-  }
+    {
+        "key": "ctrl+alt+s",
+        "command": "workbench.action.terminal.focus",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "ctrl+alt+w",
+        "command": "workbench.action.focusFirstEditorGroup",
+        "when": "!editorFocus"
+    },
+    {
+        "key": "ctrl+shift+a",
+        "command": "workbench.action.splitEditorLeft",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+d",
+        "command": "workbench.action.splitEditorRight",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+alt+a",
+        "command": "workbench.action.focusPreviousGroup",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+alt+d",
+        "command": "workbench.action.focusNextGroup",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "markdown.showPreviewToSide",
+        "when": "editorFocus && !notebookEditorFocused && editorLangId =~ /^(markdown|prompt|instructions|chatagent|skill)$/"
+    },
+    {
+        "key": "ctrl+k v",
+        "command": "-markdown.showPreviewToSide",
+        "when": "editorFocus && !notebookEditorFocused && editorLangId =~ /^(markdown|prompt|instructions|chatagent|skill)$/"
+    }
 ]
