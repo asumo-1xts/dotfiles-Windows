@@ -3,8 +3,8 @@ Set-Abbr "eza" "eza --icons --hyperlink --group-directories-first"
 
 # 設定ファイル
 Set-Abbr "sz" ". $PROFILE"
-Set-Abbr "cz" "code $PROFILE"
-Set-Abbr "cza" "code $HOME\Documents\PowerShell\pwsh_alias.ps1"
+Set-Abbr "oz" "zed $PROFILE"
+Set-Abbr "oza" "zed $HOME\Documents\PowerShell\pwsh_alias.ps1"
 
 # Git
 Set-Abbr "gad" "git add"
