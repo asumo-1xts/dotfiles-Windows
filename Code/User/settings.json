@@ -1,18 +1,15 @@
 {
-  "[github-actions-workflow]": {
-    "editor.defaultFormatter": "oxc.oxc-vscode",
-  },
-  "[powershell]": {
-    "editor.defaultFormatter": "ms-vscode.powershell",
-  },
-  "[python]": {
-    "editor.defaultFormatter": "charliermarsh.ruff",
-  },
   "[c]": {
-    "editor.defaultFormatter": "xaver.clang-format",
+    "editor.defaultFormatter": "xaver.clang-format"
   },
   "[cpp]": {
-    "editor.defaultFormatter": "xaver.clang-format",
+    "editor.defaultFormatter": "xaver.clang-format"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
+  },
+  "[powershell]": {
+    "editor.defaultFormatter": "ms-vscode.powershell"
   },
   "arduino.useArduinoCli": true,
   "chat.fontFamily": "Moralerspace Neon HW",
@@ -25,18 +22,26 @@
   "editor.wordWrap": "on",
   "explorer.compactFolders": false,
   "explorer.confirmDragAndDrop": false,
+  "explorer.confirmPasteNative": false,
   "extensions.ignoreRecommendations": true,
   "files.associations": {
     "*.toml": "ini",
-    "*.ino": "cpp",
+    "*.ino": "cpp"
   },
+  "editor.formatOnSave": true,
   "git.autofetch": true,
   "git.confirmSync": false,
   "git.openRepositoryInParentFolders": "never",
   "git.suggestSmartCommit": false,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false
+  },
   "github.copilot.nextEditSuggestions.enabled": true,
   "oxc.path.node": "C:\\Program Files\\nodejs\\node.exe",
-  // "oxc.path.node": "/home/asumo/.local/share/mise/installs/node/25.4.0/bin/node",
+  "settingsSync.ignoredExtensions": ["ms-vscode.js-debug-companion"],
   "terminal.integrated.commandsToSkipShell": ["matlab.interrupt"],
   "terminal.integrated.defaultLocation": "view",
   "terminal.integrated.defaultProfile.linux": "zsh",
@@ -46,14 +51,5 @@
   "terminal.integrated.tabs.defaultIcon": "terminal-linux",
   "vsicons.dontShowNewVersionMessage": true,
   "workbench.iconTheme": "vscode-icons",
-  "explorer.confirmPasteNative": false,
-  "csv.enabled": true,
-  "workbench.colorTheme": "GitHub Dark Colorblind (Beta)",
-  "github.copilot.enable": {
-    "*": true,
-    "plaintext": false,
-    "markdown": true,
-    "scminput": false,
-  },
-  "editor.formatOnSave": true,
+  "workbench.colorTheme": "GitHub Dark Colorblind (Beta)"
 }

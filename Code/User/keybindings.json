@@ -1,50 +1,50 @@
 [
-    {
-        "key": "ctrl+alt+/",
-        "command": "editor.action.insertSnippet",
-        "args": {
-            "snippet": "$LINE_COMMENT"
-        },
-        "when": "editorTextFocus && !editorReadonly"
+  {
+    "key": "ctrl+alt+/",
+    "command": "editor.action.insertSnippet",
+    "args": {
+      "snippet": "$LINE_COMMENT"
     },
-    {
-        "key": "ctrl+alt+s",
-        "command": "workbench.action.terminal.focus",
-        "when": "!terminalFocus"
-    },
-    {
-        "key": "ctrl+alt+w",
-        "command": "workbench.action.focusFirstEditorGroup",
-        "when": "!editorFocus"
-    },
-    {
-        "key": "ctrl+shift+a",
-        "command": "workbench.action.splitEditorLeft",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+shift+d",
-        "command": "workbench.action.splitEditorRight",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+alt+a",
-        "command": "workbench.action.focusPreviousGroup",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+alt+d",
-        "command": "workbench.action.focusNextGroup",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+p",
-        "command": "markdown.showPreviewToSide",
-        "when": "editorFocus && !notebookEditorFocused && editorLangId =~ /^(markdown|prompt|instructions|chatagent|skill)$/"
-    },
-    {
-        "key": "ctrl+k v",
-        "command": "-markdown.showPreviewToSide",
-        "when": "editorFocus && !notebookEditorFocused && editorLangId =~ /^(markdown|prompt|instructions|chatagent|skill)$/"
-    }
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+alt+s",
+    "command": "workbench.action.terminal.focus",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+alt+w",
+    "command": "workbench.action.focusFirstEditorGroup",
+    "when": "!editorFocus"
+  },
+  {
+    "key": "ctrl+alt+a",
+    "command": "workbench.action.splitEditorLeft",
+    "when": "editorFocus"
+  },
+  {
+    "key": "ctrl+alt+d",
+    "command": "workbench.action.splitEditorRight",
+    "when": "editorFocus"
+  },
+  {
+    "key": "shift+alt+a",
+    "command": "workbench.action.focusPreviousGroup",
+    "when": "editorFocus"
+  },
+  {
+    "key": "shift+alt+d",
+    "command": "workbench.action.focusNextGroup",
+    "when": "editorFocus"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "markdown.showPreviewToSide",
+    "when": "editorFocus && !notebookEditorFocused && editorLangId =~ /^(markdown|prompt|instructions|chatagent|skill)$/"
+  },
+  {
+    "key": "ctrl+k v",
+    "command": "-markdown.showPreviewToSide",
+    "when": "editorFocus && !notebookEditorFocused && editorLangId =~ /^(markdown|prompt|instructions|chatagent|skill)$/"
+  }
 ]
