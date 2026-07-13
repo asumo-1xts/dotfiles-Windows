@@ -18,7 +18,6 @@
   "editor.codeLens": false,
   "editor.defaultFormatter": "oxc.oxc-vscode",
   "editor.fontFamily": "Moralerspace Neon HW",
-  "editor.formatOnSaveMode": "file",
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
   "explorer.compactFolders": false,
@@ -36,8 +35,8 @@
   "git.suggestSmartCommit": false,
   "github.copilot.enable": {
     "*": true,
-    "plaintext": false,
     "markdown": true,
+    "plaintext": false,
     "scminput": false
   },
   "github.copilot.nextEditSuggestions.enabled": true,
@@ -52,5 +51,6 @@
   "terminal.integrated.tabs.defaultIcon": "terminal-linux",
   "vsicons.dontShowNewVersionMessage": true,
   "workbench.iconTheme": "vscode-icons",
-  "workbench.colorTheme": "GitHub Dark Colorblind (Beta)"
+  "workbench.colorTheme": "GitHub Dark Colorblind (Beta)",
+  "window.newWindowProfile": "Default"
 }

@@ -3,48 +3,52 @@
     "key": "ctrl+alt+/",
     "command": "editor.action.insertSnippet",
     "args": {
-      "snippet": "$LINE_COMMENT"
+      "snippet": "$LINE_COMMENT",
     },
-    "when": "editorTextFocus && !editorReadonly"
+    "when": "editorTextFocus && !editorReadonly",
   },
   {
     "key": "ctrl+alt+s",
     "command": "workbench.action.terminal.focus",
-    "when": "!terminalFocus"
+    "when": "!terminalFocus",
   },
   {
     "key": "ctrl+alt+w",
     "command": "workbench.action.focusFirstEditorGroup",
-    "when": "!editorFocus"
+    "when": "!editorFocus",
   },
   {
     "key": "ctrl+alt+a",
     "command": "workbench.action.splitEditorLeft",
-    "when": "editorFocus"
+    "when": "editorFocus",
   },
   {
     "key": "ctrl+alt+d",
     "command": "workbench.action.splitEditorRight",
-    "when": "editorFocus"
+    "when": "editorFocus",
   },
   {
     "key": "shift+alt+a",
     "command": "workbench.action.focusPreviousGroup",
-    "when": "editorFocus"
+    "when": "editorFocus",
   },
   {
     "key": "shift+alt+d",
     "command": "workbench.action.focusNextGroup",
-    "when": "editorFocus"
+    "when": "editorFocus",
   },
   {
     "key": "ctrl+p",
     "command": "markdown.showPreviewToSide",
-    "when": "editorFocus && !notebookEditorFocused && editorLangId =~ /^(markdown|prompt|instructions|chatagent|skill)$/"
+    "when": "editorFocus && !notebookEditorFocused && editorLangId =~ /^(markdown|prompt|instructions|chatagent|skill)$/",
   },
   {
     "key": "ctrl+k v",
     "command": "-markdown.showPreviewToSide",
-    "when": "editorFocus && !notebookEditorFocused && editorLangId =~ /^(markdown|prompt|instructions|chatagent|skill)$/"
-  }
+    "when": "editorFocus && !notebookEditorFocused && editorLangId =~ /^(markdown|prompt|instructions|chatagent|skill)$/",
+  },
+  {
+    "key": "ctrl+m",
+    "command": "-editor.action.toggleTabFocusMode",
+  },
 ]
