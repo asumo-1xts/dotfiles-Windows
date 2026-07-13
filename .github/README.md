@@ -17,6 +17,4 @@ Get-ChildItem -Path "$PWD\PowerShell" -Recurse | Unblock-File
 
 .\script\winget.ps1
 .\script\symbolic_link.ps1
-
-git config --global core.editor "edit"
 ```

@@ -36,7 +36,6 @@ Write-Host "  - Zoom Workplace from WinGet"
 Write-Host "  - CrystalDiskInfo from WinGet"
 Write-Host "  - OneCommander from WinGet"
 Write-Host "  - eza from WinGet"
-Write-Host "  - Edit from WinGet"
 Write-Host ""
 if ($args[0] -ne "/DisablePausePrompts") { pause }
 Clear-Host
@@ -59,8 +58,7 @@ $commands= @(
     'cmd.exe /C winget.exe install --id "Zoom.Zoom" --exact --source winget --accept-source-agreements --disable-interactivity --silent --accept-package-agreements --force',
     'cmd.exe /C winget.exe install --id "CrystalDewWorld.CrystalDiskInfo" --exact --source winget --accept-source-agreements --disable-interactivity --silent --accept-package-agreements --force',
     'cmd.exe /C winget.exe install --id "MilosParipovic.OneCommander" --exact --source winget --accept-source-agreements --disable-interactivity --silent --accept-package-agreements --force',
-    'cmd.exe /C winget.exe install --id "eza-community.eza" --exact --source winget --accept-source-agreements --disable-interactivity --silent --accept-package-agreements --force',
-    'cmd.exe /C winget.exe install --id "Microsoft.Edit" --exact --source winget --accept-source-agreements --disable-interactivity --silent --accept-package-agreements --force'
+    'cmd.exe /C winget.exe install --id "eza-community.eza" --exact --source winget --accept-source-agreements --disable-interactivity --silent --accept-package-agreements --force'
 )
 
 foreach ($command in $commands) {
