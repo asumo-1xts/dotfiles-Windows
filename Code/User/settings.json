@@ -35,14 +35,18 @@
   "[rust]": {
     "editor.defaultFormatter": "rust-lang.rust-analyzer",
   },
+  "[vue]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode",
+  },
   "arduino.useArduinoCli": true,
   "chat.fontFamily": "Moralerspace Neon HW",
   "chat.fontSize": 14,
   "chat.viewSessions.orientation": "stacked",
-  "dart.devToolsBrowser": "default",
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.codeLens": false,
   "editor.fontFamily": "Moralerspace Neon HW",
+  "editor.formatOnSave": true,
+  "editor.fontSize": 14,
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
   "explorer.compactFolders": false,
@@ -80,10 +84,4 @@
   "workbench.iconTheme": "vscode-icons",
   "workbench.startupEditor": "none",
   "vscode-serial-monitor.lineEnding": "\r",
-  "remote.autoForwardPortsSource": "hybrid",
-  "editor.formatOnSave": true,
-  "[vue]": {
-    "editor.defaultFormatter": "oxc.oxc-vscode",
-  },
-  "editor.fontSize": 14,
 }
