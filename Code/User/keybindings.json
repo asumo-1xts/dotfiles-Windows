@@ -3,52 +3,52 @@
     "key": "ctrl+alt+/",
     "command": "editor.action.insertSnippet",
     "args": {
-      "snippet": "$LINE_COMMENT"
+      "snippet": "$LINE_COMMENT",
     },
-    "when": "editorTextFocus && !editorReadonly"
+    "when": "editorTextFocus && !editorReadonly",
   },
   {
     "key": "ctrl+alt+s",
     "command": "workbench.action.terminal.focus",
-    "when": "!terminalFocus"
+    "when": "!terminalFocus",
   },
   {
     "key": "ctrl+alt+w",
     "command": "workbench.action.focusFirstEditorGroup",
-    "when": "!editorFocus"
+    "when": "!editorFocus",
   },
   {
     "key": "ctrl+alt+a",
-    "command": "workbench.action.splitEditorLeft"
+    "command": "workbench.action.splitEditorLeft",
   },
   {
     "key": "ctrl+alt+d",
-    "command": "workbench.action.splitEditorRight"
+    "command": "workbench.action.splitEditorRight",
   },
   {
     "key": "shift+alt+a",
-    "command": "workbench.action.focusPreviousGroup"
+    "command": "workbench.action.focusPreviousGroup",
   },
   {
     "key": "shift+alt+d",
-    "command": "workbench.action.focusNextGroup"
+    "command": "workbench.action.focusNextGroup",
   },
   {
     "key": "ctrl+p",
     "command": "markdown.showPreviewToSide",
-    "when": "editorFocus && !notebookEditorFocused && editorLangId =~ /^(markdown|prompt|instructions|chatagent|skill)$/"
+    "when": "editorFocus && !notebookEditorFocused && editorLangId =~ /^(markdown|prompt|instructions|chatagent|skill)$/",
   },
   {
     "key": "ctrl+k v",
     "command": "-markdown.showPreviewToSide",
-    "when": "editorFocus && !notebookEditorFocused && editorLangId =~ /^(markdown|prompt|instructions|chatagent|skill)$/"
+    "when": "editorFocus && !notebookEditorFocused && editorLangId =~ /^(markdown|prompt|instructions|chatagent|skill)$/",
   },
   {
     "key": "ctrl+m",
-    "command": "-editor.action.toggleTabFocusMode"
+    "command": "-editor.action.toggleTabFocusMode",
   },
   {
     "key": "ctrl+g",
-    "command": "git-graph.view"
-  }
+    "command": "git-graph-rs.view",
+  },
 ]
