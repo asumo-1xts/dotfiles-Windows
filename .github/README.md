@@ -2,9 +2,9 @@
 
 My dotfiles at Windows 11.
 
-## Recovery with `script`
+## Recovery with `scripts/`
 
-Run PowerShell as an Administrator:
+**Run PowerShell as an Administrator:**
 
 ```powershell
 $PWD # dotfiles
