@@ -1,10 +1,11 @@
 # eza
-Set-Abbr "eza" "eza --icons --hyperlink --group-directories-first"
+Set-Abbr "ls" "eza --icons --hyperlink --group-directories-first"
 
 # 設定ファイル
 Set-Abbr "sz" ". $PROFILE"
 Set-Abbr "cz" "code $PROFILE"
 Set-Abbr "cza" "code $HOME\Documents\PowerShell\pwsh_alias.ps1"
+Set-Abbr "cgc" "code $HOME\.gitconfig"
 
 # Git
 Set-Abbr "gad" "git add"
@@ -26,6 +27,7 @@ Set-Abbr "grro" "git remote remove origin"
 Set-Abbr "grh" "git reset --hard HEAD^"
 Set-Abbr "grho" "git reset --hard origin/"
 Set-Abbr "grs" "git reset --soft HEAD^"
+Set-Abbr "grso" "git remote set-url origin"
 Set-Abbr "gss" "git stash -u"
 Set-Abbr "gssa" "git stash apply"
 Set-Abbr "gst" "git status"
