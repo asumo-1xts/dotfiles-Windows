@@ -85,4 +85,5 @@
   "workbench.iconTheme": "vscode-icons",
   "workbench.startupEditor": "none",
   "vscode-serial-monitor.lineEnding": "\r",
+  "window.newWindowProfile": "Default",
 }
