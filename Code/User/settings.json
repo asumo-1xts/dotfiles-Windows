@@ -80,6 +80,7 @@
   "terminal.integrated.fontFamily": "Moralerspace Neon HW",
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.tabs.defaultIcon": "terminal-linux",
+  "terminal.integrated.initialHint": false,
   "vsicons.dontShowNewVersionMessage": true,
   "workbench.iconTheme": "vscode-icons",
   "workbench.startupEditor": "none",
