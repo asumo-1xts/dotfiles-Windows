@@ -1,22 +1,47 @@
 {
   "[c]": {
-    "editor.defaultFormatter": "xaver.clang-format"
+    "editor.defaultFormatter": "xaver.clang-format",
   },
   "[cpp]": {
-    "editor.defaultFormatter": "xaver.clang-format"
+    "editor.defaultFormatter": "xaver.clang-format",
   },
   "[github-actions-workflow]": {
-    "editor.defaultFormatter": "oxc.oxc-vscode"
+    "editor.defaultFormatter": "oxc.oxc-vscode",
+  },
+  "[html]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode",
+  },
+  "[ini]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode",
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode",
+  },
+  "[json]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode",
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode",
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode",
   },
   "[powershell]": {
-    "editor.defaultFormatter": "ms-vscode.powershell"
+    "editor.defaultFormatter": "ms-vscode.powershell",
+  },
+  "[pythoon]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+  },
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer",
   },
   "arduino.useArduinoCli": true,
   "chat.fontFamily": "Moralerspace Neon HW",
   "chat.fontSize": 14,
+  "chat.viewSessions.orientation": "stacked",
+  "dart.devToolsBrowser": "default",
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.codeLens": false,
-  "editor.defaultFormatter": "oxc.oxc-vscode",
   "editor.fontFamily": "Moralerspace Neon HW",
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
@@ -26,9 +51,12 @@
   "extensions.ignoreRecommendations": true,
   "files.associations": {
     "*.toml": "ini",
-    "*.ino": "cpp"
+    "*.ino": "cpp",
+    "*.overlay": "dts",
+    "Kconfig": "plaintext",
+    "Doxyfile": "ini",
   },
-  "editor.formatOnSave": true,
+  "files.insertFinalNewline": true,
   "git.autofetch": true,
   "git.confirmSync": false,
   "git.openRepositoryInParentFolders": "never",
@@ -37,10 +65,9 @@
     "*": true,
     "markdown": true,
     "plaintext": false,
-    "scminput": false
+    "scminput": false,
   },
   "github.copilot.nextEditSuggestions.enabled": true,
-  "oxc.path.node": "C:\\Program Files\\nodejs\\node.exe",
   "settingsSync.ignoredExtensions": ["ms-vscode.js-debug-companion"],
   "terminal.integrated.commandsToSkipShell": ["matlab.interrupt"],
   "terminal.integrated.defaultLocation": "view",
@@ -51,6 +78,12 @@
   "terminal.integrated.tabs.defaultIcon": "terminal-linux",
   "vsicons.dontShowNewVersionMessage": true,
   "workbench.iconTheme": "vscode-icons",
-  "workbench.colorTheme": "GitHub Dark Colorblind (Beta)",
-  "window.newWindowProfile": "Default"
+  "workbench.startupEditor": "none",
+  "vscode-serial-monitor.lineEnding": "\r",
+  "remote.autoForwardPortsSource": "hybrid",
+  "editor.formatOnSave": true,
+  "[vue]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode",
+  },
+  "editor.fontSize": 14,
 }

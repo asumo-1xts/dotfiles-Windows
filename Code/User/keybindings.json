@@ -20,22 +20,18 @@
   {
     "key": "ctrl+alt+a",
     "command": "workbench.action.splitEditorLeft",
-    "when": "editorFocus",
   },
   {
     "key": "ctrl+alt+d",
     "command": "workbench.action.splitEditorRight",
-    "when": "editorFocus",
   },
   {
     "key": "shift+alt+a",
     "command": "workbench.action.focusPreviousGroup",
-    "when": "editorFocus",
   },
   {
     "key": "shift+alt+d",
     "command": "workbench.action.focusNextGroup",
-    "when": "editorFocus",
   },
   {
     "key": "ctrl+p",
@@ -50,5 +46,9 @@
   {
     "key": "ctrl+m",
     "command": "-editor.action.toggleTabFocusMode",
+  },
+  {
+    "key": "ctrl+g",
+    "command": "git-graph.view",
   },
 ]
